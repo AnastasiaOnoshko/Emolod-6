@@ -1,0 +1,23 @@
+.header-wrapper{
+    height: 100px;
+    border: 2px solid #000;
+    background-color: rgb(75, 50, 47);
+    p{
+        font-size: 24px;
+        margin: 20px;
+    }
+
+    li{
+        font-size: 20px;
+        a{
+            color: aliceblue;
+        }
+    }
+
+}
+
+.header-wrapper ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}

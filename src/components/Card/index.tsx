@@ -1,18 +1,27 @@
 import './style.css'
-import type { ItemType } from '../../types/mainPage'
 
-const NewsItem = (props: ItemType) => {
+type CardProps = {
+  title: string
+  buttonText: string
+  children: React.ReactNode
+}
+
+const Card = (props: CardProps) => {
   return (
-    <div className="news-item">
-    <p className = "news-title">
-      {props.isImportant ? <strong>{props.title}</strong> : props.title}
-    </p>
-
-    <a href={props.link} className="small-desc"> Переглянути </a>
-
-    <p className="news-time">{props.time}</p>
+    <div className='card'>
+      <div className="content">
+        <div className='title'>
+          <p>{props.title}</p>
+        </div>
+        <div className='price'>
+          {props.children}
+        </div>
+      </div>
+      <button>
+        {props.buttonText}
+      </button>
     </div>
   )
 }
 
-export default NewsItem
+export default Card
